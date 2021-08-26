@@ -4,6 +4,7 @@ body {
 	height: 100%;
 	margin: 0;
 	background-color: #E2E6E9;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .block{
@@ -23,10 +24,6 @@ h1{
 	color: #1d1d1e;
 }
 
-a{
-	text-decoration: none;
-}
-
 .block_header {
 	display: flex;
 	flex-direction: row;
@@ -37,6 +34,7 @@ a{
 }
 
 .block_header_btn{
+	text-decoration: none;
 	width: 210px;
 	height: 36px;
 	display: flex;
@@ -44,11 +42,11 @@ a{
 	justify-content: space-around;
 	align-items: center;
 	border-radius: 10px;
-	border: 1px solid #9e9fa1;
-	
-}
-button{
+	border: 1px solid #E2E6E9;
 	cursor: pointer;
+	color: #1d1d1e;
+	font-size: 16px;
+	font-weight: 600;
 }
 
 .block_product{ 
@@ -65,25 +63,26 @@ button{
 	margin-bottom: 20px;
 	color: #9e9fa1;
 	font-weight: 500;
-	font-size: 20px;
+	font-size: 16px;
 }
 
 .block_product__nav--product{
-	margin-left: 120px;
+	margin-left: 100px;
 	width: 440px;
 }
 
+
 .block_product__nav--price{
-	width: 260px;
+	width: 200px;
 	text-align: left;
 }
 
 .block_product__nav--qty{
-	width: 140px;
+	width: 150px;
 }
 
 .block_product__nav--total{
-	width: 100px;
+	width: 90px;
 }
 
 .container{
@@ -98,37 +97,45 @@ button{
 	padding-left: 20px;
 }
 
+.block_product-title{
+	color: #1d1d1e;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+
 .block_product__xiaomi{
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: space-around;
-	width: 560px;
+	width: 530px;
 	}
 
-.block_product-id {
+.block_product-id,
+.block_product-descr {
+	font-size: 14px;
 	color:#626364;
 
-}
-
-.block_product-descr{
-
-	color:#626364;
 }
 
 .extra {
+	font-size: 16px;
 	font-weight: 600;
 }
 
-input{
-	 text-decoration: none;
-	 list-style: none;
-}
 
 .block_product__price{
-width: 240px;
+	width: 200px;
 	height: 119px;
 }
+
+.block_product__price--opt,
+.block_product__price--sub {
+	font-size: 14px;
+	color:#626364;
+}
+
 
 .block_product__qty{
 	width: 160px;
@@ -140,9 +147,14 @@ width: 240px;
 
 }
 
+
+input {
+	text-decoration: none;
+}
+
 .price{
 	font-weight: 500;
-	font-size: 20px;  
+	font-size: 18px;  
 }
 
 .total{
@@ -153,7 +165,7 @@ width: 240px;
 	justify-content: flex-start;
 	align-items: center;
 	font-weight: 500;
-	font-size: 20px;    
+	font-size: 18px;    
 
 }
 
@@ -254,6 +266,7 @@ width: 240px;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-around;
+	text-decoration: none;
 	width: 370px;
 	height: 40px;
 	border-radius: 10px;
@@ -273,4 +286,13 @@ hr{
 	height: 0.2px;
 	background-color: #9e9fa1;
 	color: #9e9fa1;
+}
+
+.bi-check2{
+	position: relative;
+	top: 2px;
+	left: 2px;
+	color: #E2E6E9;
+	font-weight: 600;
+	cursor: pointer;
 }
