@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+		integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+<div class="block">
+
+<div class="block_header">
+	<h1>My Cart</h1>
+	<div>
+		<a href="#continue_shopping">
+		<button class="block_header_btn">
+				<i class="fas fa-arrow-left"></i>
+				Continue shopping
+	</button>
+</a>
+
+	</div>
+</div>
+
+	<div class="block_product">
+
+			<div class="block_product__nav">
+				<div class="block_product__nav--product">PRODUCT</div>
+				<div class="block_product__nav--price">PRICE</div>
+				<div class="block_product__nav--qty">QTY</div>
+				<div class="block_product__nav--total">TOTAL</div>
+			</div>
+			<hr>
+
+	<div id="cart" class="container">
+
+			<div class="block_product__xiaomi">
+				<img src="img/1.jpg" alt="Xiaomi">
+				<div>
+					<span class="block_product-title">Xiaomi 365</span>
+					<p class="block_product-id">#21433254354532</p>
+					<p class="block_product-descr">Color: White // <span class="extra">Extra:</span> Sport Tire + Battery High 100</p>
+				</div>
+			</div>	
+
+			<div class="block_product__price">
+
+				<p class="block_product__price--opt">+ 50.99&euro; Sport Tire</p>
+				<p class="block_product__price--sub">+ 35€ Battery High</p>
+				<div class="price">488.99&euro;</div>
+
+			</div>	
+
+			<div class="block_product__qty">
+
+				<input type="button" value="-" id="decr" onclick="decrement()">
+				<input type="text" value="1" size="1" disabled="disabled" id="count">
+				<input type="button" value="+" id="incr" onclick="increment()">
+
+			</div>
+
+			<div class="total" id="total">488.99&euro;</div>
+</div>	
+<hr>
+
+<div id="cart" class="container">
+			<div class="block_product__xiaomi">
+
+				<img src="img/2.jpg" alt="Ninebot">
+				<div id="title">
+					<span class="block_product-title">Ninebot ES2</span>
+					<p class="block_product-id">#21432353246353</p>
+					<p class="block_product-descr">Color: Black // <span class="extra">Extra:</span>  Full Tire </p>
+	
+				</div>
+			</div>	
+
+			<div class="block_product__price">
+				<p class="block_product__price--opt">+ 80.99&euro; Full Tire</p>
+				<div class="price">488.99&euro;</div>
+
+			</div>	
+
+			<div class="block_product__qty">
+
+				<input type="button" value="-" id="decr" onclick="decrement()">
+				<input type="text" value="1" size="1" disabled="disabled" id="count">
+				<input type="button" value="+" id="incr" onclick="increment()">
+
+			</div>
+
+			<div class="total" id="total">488.99&euro;</div>
+		</div>
+
+
+	<div class="modal">
+		<div class="modal_delivery">
+			<p class="modal_delivery__title">Choose shipping mode:</p>
+
+				<div class="modal_delivery__opt">
+
+						<div id="button1" class="button" onclick=changeBg()></div>
+						<p id="op1" class="modal_delivery-fs">Store pickup (In 20 min)  &bull;  <span class="extra" >FREE</span></p> 
+				</div>
+
+				<div class="modal_delivery__var">
+
+						<div id="button2" class="button" onclick=changeBg()></div>	
+						<p id="op2" class="modal_delivery-fs">Delivery at home (Under 2-4 day)  &bull;  <span class="extra">9.90&euro;</span></p>					
+			</div>
+
+			<span class="modal_delivery-adress" >At 45 Glengridge Ave. Brooklyn, NY 11220</span>
+		</div>
+
+		<div>
+</div>
+	
+	<div class="modal_checkout">
+		<div>
+			<div class="modal_checkout__subtotal">SUBTOTAL TTC
+				<div>1954.55</div>
+		</div>
+		<div class="modal_checkout__shipping">SHIPPING
+			<div>FREE</div>
+		</div>
+		</div>
+
+		<div>
+		<hr>
+		</div>
+
+
+			<div class="modal_checkout__total">TOTAL
+				<div>1945.45</div>
+			</div>
+			<a href="#checkout">
+				<button class="modal_checkout__btn">
+					<p>Chechout</p>	 
+					<div>1112</div>	
+				</button>
+			</a>
+		</div>
+	</div>
+
+</div>
+
+<script src="js/index.js"></script>
+<script src="js/product.js"></script>
+</body>
+</html>
