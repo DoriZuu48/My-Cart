@@ -5,17 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Cart</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/font.css">
 </head>
 <body>
     
 <div class="block">
 
 <div class="block_header">
-	<h1>My Cart</h1>
+	<h1 class="block_header__title">My Cart</h1>
 	<div>
 		<a href = "#continue_shopping" class="block_header_btn">
 			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
@@ -41,7 +39,7 @@
 
 			<div class="block_product__xiaomi">
 				<img src="img/1.jpg" alt="Xiaomi">
-				<div>
+				<div class="title">
 					<span class="block_product-title">Xiaomi 365</span>
 					<p class="block_product-id">#21433254354532</p>
 					<p class="block_product-descr">Color: White // <span class="extra">Extra:</span> Sport Tire + Battery High 100</p>
@@ -51,16 +49,23 @@
 			<div class="block_product__price">
 
 				<p class="block_product__price--opt">+ 50.99&euro; Sport Tire</p>
-				<p class="block_product__price--sub">+ 35€ Battery High</p>
+				<p class="block_product__price--sub">+ 35&euro; Battery High</p>
 				<div class="price">488.99&euro;</div>
 
 			</div>	
 
 			<div class="block_product__qty">
+				<div class="block_product__qty-count">
+					<button data-action="decrement" class=" decrement">
+						<span class="m-auto text-2xl font-thin">−</span>
+					  </button>
 
-				<input type="radio" value="-" id="decr" onclick="decrement()">
-				<input type="radio" value="1" size="1" disabled="disabled" id="count">
-				<input type="radio" value="+" id="incr" onclick="increment()">
+					  <input type="number" class="number" name="custom-input-number" value="1"></input>
+
+					<button data-action="increment" class="increment">
+					  <span class="m-auto text-2xl font-thin">+</span>
+					</button>
+				</div>
 
 			</div>
 
@@ -81,7 +86,7 @@
 			<div class="block_product__xiaomi">
 
 				<img src="img/2.jpg" alt="Ninebot">
-				<div id="title">
+				<div class="title">
 					<span class="block_product-title">Ninebot ES2</span>
 					<p class="block_product-id">#21432353246353</p>
 					<p class="block_product-descr">Color: Black // <span class="extra">Extra:</span>  Full Tire </p>
@@ -96,14 +101,22 @@
 			</div>	
 
 			<div class="block_product__qty">
+				<div class="block_product__qty-count">
+					<button data-action="decrement" class=" decrement">
+						<span class="m-auto text-2xl font-thin">−</span>
+					  </button>
 
-				<input type="radio" value="-" id="decr" onclick="decrement()">
-				<input type="radio" value="1" size="1" disabled="disabled" id="count">
-				<input type="radio" value="+" id="incr" onclick="increment()">
+					  <input type="number" class="number" name="custom-input-number" value="3"></input>
+
+					<button data-action="increment" class="increment">
+					  <span class="m-auto text-2xl font-thin">+</span>
+					</button>
+				</div>
 
 			</div>
 
-			<div class="total">488.99&euro;</div>
+
+			<div class="total">1469.97&euro;</div>
 
 			<div class="block_product__delete">
 
@@ -126,7 +139,7 @@
 								<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
 							</svg>
 						</div>
-						<p id="op1" class="modal_delivery-fs">Store pickup (In 20 min)  &bull;  <span class="extra" >FREE</span></p> 
+						<p class="modal_delivery-fs">Store pickup (In 20 min)  &bull;  <span class="extra" >FREE</span></p> 
 				</div>
 
 				<div class="modal_delivery__var">
@@ -138,19 +151,26 @@
 							</svg>
 
 						</div>	
-						<p id="op2" class="modal_delivery-fs">Delivery at home (Under 2-4 day)  &bull;  <span class="extra">9.90&euro;</span></p>					
-			</div>
+						<div>					
+								<p class="modal_delivery-fs">Delivery at home (Under 2-4 day)  &bull;  <span class="extra">9.90&euro;</span></p>		
+							<p class="modal_delivery-adress" >At 45 Glengridge Ave. Brooklyn, NY 11220
+							</p>	
 
-			<span class="modal_delivery-adress" >At 45 Glengridge Ave. Brooklyn, NY 11220</span>
+						</div>
+
+			</div>
+	
+		
 		</div>
 
 		<div>
 </div>
+
 	
 	<div class="modal_checkout">
 		<div>
 			<div class="modal_checkout__subtotal">SUBTOTAL TTC
-				<div>1954.55</div>
+				<div>1954.97&euro;</div>
 		</div>
 		<div class="modal_checkout__shipping">SHIPPING
 			<div>FREE</div>
@@ -162,11 +182,11 @@
 		</div>
 
 			<div class="modal_checkout__total">TOTAL
-				<div>1945.45</div>
+				<div>1954.97&euro;</div>
 			</div>
 			<a href="#checkout" class="modal_checkout__btn">			
 					<p>Chechout</p>	 
-					<div>1112</div>	
+					<div>1954.97 &euro;</div>	
 			</a>
 		</div>
 	</div>

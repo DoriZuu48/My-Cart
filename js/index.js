@@ -1,39 +1,42 @@
 
-let countInput;
-let totalDiv;
-let decrementButton;
+function decrement(e) {
+    const btn = e.target.parentNode.parentElement.querySelector(
+      'button[data-action="decrement"]'
+    );
+    const target = btn.nextElementSibling;
+    let value = Number(target.value);
+    value--;
+    target.value = value;
+  }
 
-const PRICE = 488.99;
+  function increment(e) {
+    const btn = e.target.parentNode.parentElement.querySelector(
+      'button[data-action="decrement"]'
+    );
+    const target = btn.nextElementSibling;
+    let value = Number(target.value);
+    value++;
+    target.value = value;
+  }
 
-document.addEventListener('DOMContentLoaded', function(event) { 
-    countInput = document.getElementById('count');
-    totalDiv = document.getElementById('total');
-    decrementButton = document.getElementById('decr');
+  const decrementButtons = document.querySelectorAll(
+    `button[data-action="decrement"]`
+  );
 
-    calculateTotal();
-});
+  const incrementButtons = document.querySelectorAll(
+    `button[data-action="increment"]`
+  );
 
-const increment = () => {
-    countInput.value++;
-    if (decrementButton.disabled) {
-        decrementButton.disabled = false;
-    }
+  decrementButtons.forEach(btn => {
+    btn.addEventListener("click", decrement);
+  });
 
-    calculateTotal();
-}
+  incrementButtons.forEach(btn => {
+    btn.addEventListener("click", increment);
+  });
 
-const decrement = () => {
-    countInput.value--;
-    if (Number(countInput.value) === 0) {
-        decrementButton.disabled = true;
-    }
 
-    calculateTotal();
-}
 
-const calculateTotal = () => {
-    totalDiv.innerText = `${PRICE * countInput.value}`;
-}
 
 
 document.getElementById("button1").style.backgroundColor ="#E2E6E9";
