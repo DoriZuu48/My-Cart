@@ -39,15 +39,19 @@ function decrement(e) {
 
 
 
-document.getElementById("button1").style.backgroundColor ="#E2E6E9";
-document.getElementById("button2").style.backgroundColor ="#E2E6E9";
+document.getElementById("button1").style.backgroundColor ="#edf1f4";
+document.getElementById("button2").style.backgroundColor ="#edf1f4";
+
 document.getElementById("button1").onclick = function(){
-    this.style.backgroundColor = "#F05359";
-    document.getElementById("button2").style.backgroundColor ="#E2E6E9";
+    this.style.backgroundColor = "#fb3d46";
+    document.getElementById("button2").style.backgroundColor ="#edf1f4";
+
 
 }
 document.getElementById("button2").onclick = function(){
-    this.style.backgroundColor ="#F05359";
-    document.getElementById("button1").style.backgroundColor ="#E2E6E9";
+    this.style.backgroundColor ="#fb3d46";
+    document.getElementById("button1").style.backgroundColor ="#edf1f4";
 
 };
+
+

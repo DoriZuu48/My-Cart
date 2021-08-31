@@ -11,12 +11,12 @@ body {
 	width: 100%;
 	height: 100%;
 	margin: 0;
-	background-color: #E2E6E9;
+	background: #e2e6e9;
 }
 
 .block{
 	width: 1139px;
-	height: 900px;
+	height: 850px;
 	margin: 40px auto;
 	padding: 0 40px;
 	background-color: white;
@@ -28,7 +28,7 @@ body {
 
 h1{
 	font-size: 46px;
-	color: #1d1d1e;
+	color: #343434;
 }
 
 .block_header {
@@ -36,7 +36,7 @@ h1{
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	margin: 40px 70px 30px 70px;
+	margin: 40px 70px 20px 70px;
 	width: 1053px;
 }
 
@@ -51,7 +51,7 @@ h1{
 	border-radius: 10px;
 	border: 1px solid #E2E6E9;
 	cursor: pointer;
-	color: #1d1d1e;
+	color: #343434;
 	font-size: 14px;
 	font-weight: 600;
 }
@@ -60,44 +60,44 @@ h1{
 	width: 1053px;
 	height: 400px;
 	margin-left: 70px;
-
 }
 
 .block_product__nav{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	margin-bottom: 20px;
-	color: #9e9fa1;
-	font-weight: 500;
+	margin-bottom: 25px;
+	color: #919191;
 	font-size: 16px;
 }
 
 .block_product__nav--product{
-	margin-left: 100px;
-	width: 440px;
+	margin-left: 130px;
+	width: 400px;
 }
 
-
 .block_product__nav--price{
-	width: 200px;
+	width: 150px;
 	text-align: left;
 }
 
 .block_product__nav--qty{
-	width: 165px;
+	width: 150px;
+	text-align: center;
 }
 
 .block_product__nav--total{
-	width: 90px;
+	width: 180px;
+	text-align: center;
 }
 
 .container{
 	display: inline-flex;
-	margin: 20px 0 20px 0;
+	margin: 10px 0 10px 0;
 	justify-content: space-around;
 	align-items: center;
 }
+
 .block_product__xiaomi{
 	display: flex;
 	flex-direction: row;
@@ -115,24 +115,24 @@ h1{
 }
 
 .block_product-title{
-	color: #1d1d1e;
+	color: #343434;
 	font-size: 16px;
 	font-weight: 600;
 }
 
 .block_product-id,
 .block_product-descr {
-	font-size: 14px;
-	color:#626364;
+	font-size: 12px;
+	font-weight: 600;
+	color:#858688;
 
 }
 
 .extra {
 	font-size: 14px;
 	font-weight: 600;
-	color:#626364;
+	color:#6d6d6d;
 }
-
 
 .block_product__price{
 	display: flex;
@@ -145,11 +145,11 @@ h1{
 
 .block_product__price--opt,
 .block_product__price--sub {
-	margin: 7px;
-	font-size: 14px;
-	color:#626364;
+	margin: 7px 0;
+	font-size: 12px;
+	font-weight: 600;
+	color:#858688;
 }
-
 
 .block_product__qty{
 	width: 160px;
@@ -159,6 +159,7 @@ h1{
 	justify-content: flex-start;
 	align-items: center;
 }
+
 .block_product__qty-count{
 	cursor: pointer;
 	background-color: transparent;
@@ -184,7 +185,6 @@ h1{
 	font-size: 20px;
 }
 
-
 input {
 	-webkit-appearance: none;
 	margin: 0;
@@ -199,7 +199,7 @@ input {
 	font-size: 18px;  
 }
 
- input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
 } 
@@ -221,33 +221,33 @@ input[type='number']::-webkit-outer-spin-button {
 	align-items: center;
 	font-weight: 500;
 	font-size: 18px;    
-
 }
 
 .modal{
 	height: 220px;
 	width: 1053px;
-	background-color: #E2E6E9;
+	background-color: #edf1f4;
 	margin-top: 40px;
 	border-radius: 30px;
-	box-shadow: 5px 4px 4px #9e9fa1;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 }
+
 .modal_delivery{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
-	margin-left: 40px;
+	margin-left: 30px;
 	height: 200px;
 	width: 370px;
 }
 
 .modal_delivery__title{
 	margin-top: 10px;
-	font-size: 22px;
+	font-size: 20px;
 	font-weight: 600;
 }
 
@@ -255,15 +255,13 @@ input[type='number']::-webkit-outer-spin-button {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-
-
 }
+
 .modal_delivery__var{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
-	
 }
 
 .button {
@@ -271,32 +269,44 @@ input[type='number']::-webkit-outer-spin-button {
 	width: 20px;
 	border: 1px solid #9e9fa1;
 	border-radius: 15px;
-
-}
-.button + p:hover{
-	color: #1d1d1e;
 }
 
+.bi-check2{
+	position: relative;
+	top: 2px;
+	left: 2px;
+	color: #edf1f4;
+	font-weight: 600;
+	cursor: pointer;
+}
 
 .modal_delivery-fs{
-	font-size: 14px;
+	font-size: 12px;
+	font-weight: 600;
 	padding-left: 15px;
-	color: #626364;
+	color: #6e7072;
 }
 
-.modal_delivery-adress{
-	font-size: 14px;
-	padding-left: 38px;
-	color: #626364;
+.adress{
+	font-size: 10px;
+	font-weight: 500;
+}
+
+button::before,
+.modal_delivery-fs:hover{
+	color: #343434;
+}
+
+#button1:checked ~ #delivery1:hover{
+	color: #343434;
 }
 
 .modal_checkout{
 	padding-top: 10px;
 	height: 200px;
 	width: 370px;
-	color: #626364;
+	color:#6e7072;
 }
-
 
 .modal_checkout__subtotal,
 .modal_checkout__shipping{
@@ -304,18 +314,25 @@ input[type='number']::-webkit-outer-spin-button {
 	flex-direction: row;
 	align-items: flex-start;
 	justify-content: space-between;
-	width: 300px;
+	width: 320px;
 	padding: 5px;
 	margin: 10px;
 	font-size: 14px;
-
 }
+
+.modal_checkout__subtotal div,
+.modal_checkout__shipping div,
+.modal_checkout__total div{
+	font-weight: 600;
+	color: #343434;
+}
+
 .modal_checkout__total{
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
 	justify-content: space-between;
-	width: 300px;
+	width: 320px;
 	padding: 5px;
 	margin: 10px;
 	font-size: 14px;
@@ -325,19 +342,20 @@ input[type='number']::-webkit-outer-spin-button {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: space-between;
 	text-decoration: none;
+	margin-top: 25px;
 	width: 370px;
-	height: 40px;
+	height: 45px;
 	border-radius: 10px;
-	background-color: #F05359;
+	background-color: #fb3d46;
 	border: none;
 	color: white;
 }
 
 .modal_checkout__btn p, 
 .modal_checkout__btn div{
-
+	margin: 0 35px 0 15px;
 	font-weight: 600;
 	font-size: 18px;
 }
@@ -345,15 +363,7 @@ input[type='number']::-webkit-outer-spin-button {
 hr{
 	border: none;
 	height: 0.2px;
-	background-color: #9e9fa1;
+	background-color: #e2e6e9;
 	color: #9e9fa1;
 }
 
-.bi-check2{
-	position: relative;
-	top: 2px;
-	left: 2px;
-	color: #E2E6E9;
-	font-weight: 600;
-	cursor: pointer;
-}
