@@ -251,43 +251,55 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 label {
+	position: relative;
 	cursor: pointer;
 	width: 280px;
 }
 
-
-label input:checked{
-	border: #fb3d46;
+label input:checked + span{
+	color:#000;  
 }
 
-
 label input:checked + span:before {
-	color:#343434;
+	background-color: #fb3d46;
+	border-color: #fb3d46;
 }
 
 label span{
 	display: flex;
 	align-items: center;
 	transition: 0.25s ease;
-}
+	position: relative;
+	padding-left: 25px; 
+  }
 
 label span:hover {
 	color: #343434;
 }
 
-label span:before {
+label span:before, label span:after {
 	display: flex;
 	flex-direction: row;
 	content: "";
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
-	background: #edf1f4;
 	transition: 0.25s ease;
 	border:  1px solid  #6e7072;
 	margin-right: 10px;
-}
+	position: absolute;
+	left: 0;
+  }
 
+  label input:checked + span:after{
+	background-color: transparent;
+	border-color: transparent;
+	color: #edf1f4;
+	content: '✔';
+	width: 10px;
+	height: 14px;
+	left: 5px
+  }
 
 .modal_delivery__fs{
 	font-size: 12px;
