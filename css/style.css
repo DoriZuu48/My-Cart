@@ -72,22 +72,25 @@ h1{
 }
 
 .block_product__nav--product{
-	margin-left: 130px;
-	width: 400px;
+	margin-left: 160px;
+	width: 380px;
 }
 
-.block_product__nav--price{
+.block_product__nav--price,
+.block_product__price{
 	width: 150px;
 	text-align: left;
 }
 
-.block_product__nav--qty{
+.block_product__nav--qty,
+.block_product__qty{
 	width: 150px;
 	text-align: center;
 }
 
-.block_product__nav--total{
-	width: 180px;
+.block_product__nav--total,
+.block_product__total{
+	width: 140px;
 	text-align: center;
 }
 
@@ -98,7 +101,14 @@ h1{
 	align-items: center;
 }
 
-.block_product__xiaomi{
+.block_product__img{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-content: center;
+}
+
+.block_product__deitals{
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
@@ -106,7 +116,7 @@ h1{
 	width: 530px;
 }
 
-.block_product__xiaomi div{
+.block_product__deitals div{
 	padding-left: 20px;
 }
 
@@ -114,14 +124,14 @@ h1{
 	padding-top: 25px;
 }
 
-.block_product-title{
+.block_product__title{
 	color: #343434;
 	font-size: 16px;
 	font-weight: 600;
 }
 
-.block_product-id,
-.block_product-descr {
+.block_product__id,
+.block_product__descr {
 	font-size: 12px;
 	font-weight: 600;
 	color:#858688;
@@ -149,15 +159,6 @@ h1{
 	font-size: 12px;
 	font-weight: 600;
 	color:#858688;
-}
-
-.block_product__qty{
-	width: 160px;
-	height: 119px;
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	align-items: center;
 }
 
 .block_product__qty-count{
@@ -212,7 +213,7 @@ input[type='number']::-webkit-outer-spin-button {
   outline: none !important;
 } 
 
-.total{
+.block_product__total{
 	width: 140px;
 	height: 119px;
 	display: flex;
@@ -224,7 +225,7 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .modal{
-	height: 220px;
+	height: 230px;
 	width: 1053px;
 	background-color: #edf1f4;
 	margin-top: 40px;
@@ -238,71 +239,70 @@ input[type='number']::-webkit-outer-spin-button {
 .modal_delivery{
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
-	margin-left: 30px;
+	align-content: flex-start;
 	height: 200px;
 	width: 370px;
 }
 
 .modal_delivery__title{
-	margin-top: 10px;
+	padding-top: 20px;
 	font-size: 20px;
 	font-weight: 600;
 }
 
-.modal_delivery__opt{
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
+label {
+	cursor: pointer;
+	width: 280px;
 }
 
-.modal_delivery__var{
+
+label input:checked{
+	border: #fb3d46;
+}
+
+
+label input:checked + span:before {
+	color:#343434;
+}
+
+label span{
+	display: flex;
+	align-items: center;
+	transition: 0.25s ease;
+}
+
+label span:hover {
+	color: #343434;
+}
+
+label span:before {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
-}
-
-.button {
-	height: 20px;
+	content: "";
 	width: 20px;
-	border: 1px solid #9e9fa1;
-	border-radius: 15px;
+	height: 20px;
+	border-radius: 50%;
+	background: #edf1f4;
+	transition: 0.25s ease;
+	border:  1px solid  #6e7072;
+	margin-right: 10px;
 }
 
-.bi-check2{
-	position: relative;
-	top: 2px;
-	left: 2px;
-	color: #edf1f4;
-	font-weight: 600;
-	cursor: pointer;
-}
 
-.modal_delivery-fs{
+.modal_delivery__fs{
 	font-size: 12px;
 	font-weight: 600;
-	padding-left: 15px;
 	color: #6e7072;
 }
 
 .adress{
-	font-size: 10px;
+	padding-left: 30px;
+	font-size: 11px;
 	font-weight: 500;
 }
 
-button::before,
-.modal_delivery-fs:hover{
-	color: #343434;
-}
-
-#button1:checked ~ #delivery1:hover{
-	color: #343434;
-}
-
 .modal_checkout{
-	padding-top: 10px;
+	padding-top: 20px;
 	height: 200px;
 	width: 370px;
 	color:#6e7072;
